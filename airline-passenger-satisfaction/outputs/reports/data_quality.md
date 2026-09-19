@@ -6,13 +6,13 @@ _Generated automatically from the dataset; every figure below is computed, not a
 
 - Rows: **129,880**
 - Columns: **24**
-- Target column: **`Satisfaction`**
+- Target column: **`satisfaction_v2`**
 
 ## 2. Missing values
 
 | Column | Missing | % |
 |---|---|---|
-| Arrival Delay | 393 | 0.30% |
+| Arrival Delay in Minutes | 393 | 0.30% |
 
 ## 3. Duplicates
 
@@ -22,54 +22,54 @@ _Generated automatically from the dataset; every figure below is computed, not a
 
 | Column | Reason for removal |
 |---|---|
-| `ID` | unique identifier (129880 distinct values, one per row) |
+| `id` | unique identifier (129880 distinct values, one per row) |
 
 ## 5. Target distribution
 
 | Class | Count | Share |
 |---|---|---|
-| Neutral or Dissatisfied | 73,452 | 56.55% |
-| Satisfied | 56,428 | 43.45% |
+| satisfied | 71,087 | 54.73% |
+| neutral or dissatisfied | 58,793 | 45.27% |
 
-Imbalance ratio (majority:minority) = **1.30:1**. Mild imbalance -- resampling (e.g. SMOTE) is not required; stratified splitting is sufficient.
+Imbalance ratio (majority:minority) = **1.21:1**. Mild imbalance -- resampling (e.g. SMOTE) is not required; stratified splitting is sufficient.
 
 ## 6. Feature types
 
-- Numeric columns (19): `ID`, `Age`, `Flight Distance`, `Departure Delay`, `Arrival Delay`, `Departure and Arrival Time Convenience`, `Ease of Online Booking`, `Check-in Service`, `Online Boarding`, `Gate Location`, `On-board Service`, `Seat Comfort`, `Leg Room Service`, `Cleanliness`, `Food and Drink`, `In-flight Service`, `In-flight Wifi Service`, `In-flight Entertainment`, `Baggage Handling`
+- Numeric columns (19): `id`, `Age`, `Flight Distance`, `Seat comfort`, `Departure/Arrival time convenient`, `Food and drink`, `Gate location`, `Inflight wifi service`, `Inflight entertainment`, `Online support`, `Ease of Online booking`, `On-board service`, `Leg room service`, `Baggage handling`, `Checkin service`, `Cleanliness`, `Online boarding`, `Departure Delay in Minutes`, `Arrival Delay in Minutes`
 
-- Categorical columns (5): `Gender`, `Customer Type`, `Type of Travel`, `Class`, `Satisfaction`
+- Categorical columns (5): `satisfaction_v2`, `Gender`, `Customer Type`, `Type of Travel`, `Class`
 
 ## 7. Numeric summary
 
-|                                        |   count |     mean |      std |   min |     25% |     50% |     75% |    max |
-|:---------------------------------------|--------:|---------:|---------:|------:|--------:|--------:|--------:|-------:|
-| ID                                     |  129880 | 64940.5  | 37493.3  |     1 | 32470.8 | 64940.5 | 97410.2 | 129880 |
-| Age                                    |  129880 |    39.43 |    15.12 |     7 |    27   |    40   |    51   |     85 |
-| Flight Distance                        |  129880 |  1190.32 |   997.45 |    31 |   414   |   844   |  1744   |   4983 |
-| Departure Delay                        |  129880 |    14.71 |    38.07 |     0 |     0   |     0   |    12   |   1592 |
-| Arrival Delay                          |  129487 |    15.09 |    38.47 |     0 |     0   |     0   |    13   |   1584 |
-| Departure and Arrival Time Convenience |  129880 |     3.06 |     1.53 |     0 |     2   |     3   |     4   |      5 |
-| Ease of Online Booking                 |  129880 |     2.76 |     1.4  |     0 |     2   |     3   |     4   |      5 |
-| Check-in Service                       |  129880 |     3.31 |     1.27 |     0 |     3   |     3   |     4   |      5 |
-| Online Boarding                        |  129880 |     3.25 |     1.35 |     0 |     2   |     3   |     4   |      5 |
-| Gate Location                          |  129880 |     2.98 |     1.28 |     0 |     2   |     3   |     4   |      5 |
-| On-board Service                       |  129880 |     3.38 |     1.29 |     0 |     2   |     4   |     4   |      5 |
-| Seat Comfort                           |  129880 |     3.44 |     1.32 |     0 |     2   |     4   |     5   |      5 |
-| Leg Room Service                       |  129880 |     3.35 |     1.32 |     0 |     2   |     4   |     4   |      5 |
-| Cleanliness                            |  129880 |     3.29 |     1.31 |     0 |     2   |     3   |     4   |      5 |
-| Food and Drink                         |  129880 |     3.2  |     1.33 |     0 |     2   |     3   |     4   |      5 |
-| In-flight Service                      |  129880 |     3.64 |     1.18 |     0 |     3   |     4   |     5   |      5 |
-| In-flight Wifi Service                 |  129880 |     2.73 |     1.33 |     0 |     2   |     3   |     4   |      5 |
-| In-flight Entertainment                |  129880 |     3.36 |     1.33 |     0 |     2   |     4   |     4   |      5 |
-| Baggage Handling                       |  129880 |     3.63 |     1.18 |     1 |     3   |     4   |     5   |      5 |
+|                                   |   count |     mean |      std |   min |     25% |     50% |     75% |    max |
+|:----------------------------------|--------:|---------:|---------:|------:|--------:|--------:|--------:|-------:|
+| id                                |  129880 | 64940.5  | 37493.3  |     1 | 32470.8 | 64940.5 | 97410.2 | 129880 |
+| Age                               |  129880 |    39.43 |    15.12 |     7 |    27   |    40   |    51   |     85 |
+| Flight Distance                   |  129880 |  1981.41 |  1027.12 |    50 |  1359   |  1925   |  2544   |   6951 |
+| Seat comfort                      |  129880 |     2.84 |     1.39 |     0 |     2   |     3   |     4   |      5 |
+| Departure/Arrival time convenient |  129880 |     2.99 |     1.53 |     0 |     2   |     3   |     4   |      5 |
+| Food and drink                    |  129880 |     2.85 |     1.44 |     0 |     2   |     3   |     4   |      5 |
+| Gate location                     |  129880 |     2.99 |     1.31 |     0 |     2   |     3   |     4   |      5 |
+| Inflight wifi service             |  129880 |     3.25 |     1.32 |     0 |     2   |     3   |     4   |      5 |
+| Inflight entertainment            |  129880 |     3.38 |     1.35 |     0 |     2   |     4   |     4   |      5 |
+| Online support                    |  129880 |     3.52 |     1.31 |     0 |     3   |     4   |     5   |      5 |
+| Ease of Online booking            |  129880 |     3.47 |     1.31 |     0 |     2   |     4   |     5   |      5 |
+| On-board service                  |  129880 |     3.47 |     1.27 |     0 |     3   |     4   |     4   |      5 |
+| Leg room service                  |  129880 |     3.49 |     1.29 |     0 |     2   |     4   |     5   |      5 |
+| Baggage handling                  |  129880 |     3.7  |     1.16 |     1 |     3   |     4   |     5   |      5 |
+| Checkin service                   |  129880 |     3.34 |     1.26 |     0 |     3   |     3   |     4   |      5 |
+| Cleanliness                       |  129880 |     3.71 |     1.15 |     0 |     3   |     4   |     5   |      5 |
+| Online boarding                   |  129880 |     3.35 |     1.3  |     0 |     2   |     4   |     4   |      5 |
+| Departure Delay in Minutes        |  129880 |    14.71 |    38.07 |     0 |     0   |     0   |    12   |   1592 |
+| Arrival Delay in Minutes          |  129487 |    15.09 |    38.47 |     0 |     0   |     0   |    13   |   1584 |
 
 ## 8. Categorical levels
 
+- `satisfaction_v2`: satisfied (71,087), neutral or dissatisfied (58,793)
 - `Gender`: Female (65,899), Male (63,981)
-- `Customer Type`: Returning (106,100), First-time (23,780)
-- `Type of Travel`: Business (89,693), Personal (40,187)
-- `Class`: Business (62,160), Economy (58,309), Economy Plus (9,411)
-- `Satisfaction`: Neutral or Dissatisfied (73,452), Satisfied (56,428)
+- `Customer Type`: Loyal Customer (106,100), disloyal Customer (23,780)
+- `Type of Travel`: Business travel (89,693), Personal Travel (40,187)
+- `Class`: Business (62,160), Eco (58,309), Eco Plus (9,411)
 
 ## 9. Service-rating scale note
 
@@ -77,10 +77,10 @@ Service ratings are documented as 1-5 but contain **0** values. Measured satisfa
 
 | Feature | 0 | 1 | 2 | 3 | 4 | 5 |
 |---|---|---|---|---|---|---|
-| Departure and Arrival Time Convenience | 48.1% | 49.0% | 44.5% | 44.0% | 38.9% | 42.5% |
-| Ease of Online Booking | 66.6% | 37.9% | 30.3% | 31.0% | 53.2% | 73.5% |
-| Check-in Service | 0.0% | 24.0% | 25.1% | 45.1% | 46.0% | 61.2% |
-| Online Boarding | 56.5% | 13.8% | 11.5% | 13.8% | 62.3% | 87.1% |
-| Gate Location | 100.0% | 49.9% | 46.4% | 34.7% | 39.1% | 56.8% |
+| Seat comfort | 99.8% | 45.1% | 35.8% | 35.6% | 65.2% | 99.2% |
+| Departure/Arrival time convenient | 54.2% | 58.6% | 54.0% | 53.9% | 52.5% | 55.7% |
+| Food and drink | 77.9% | 50.8% | 43.2% | 42.8% | 59.0% | 78.0% |
+| Gate location | 100.0% | 61.1% | 58.0% | 46.3% | 49.8% | 65.6% |
+| Inflight wifi service | 44.7% | 26.8% | 50.2% | 51.0% | 63.8% | 66.9% |
 
 **Decision:** ratings are kept as plain 0-5 numeric values (consistent with the reference literature). This observation is documented and discussed in the report rather than encoded as a separate indicator.

@@ -1,46 +1,46 @@
 {
-  "model": "Random Forest",
+  "model": "XGBoost",
   "disclaimer": "SHAP values explain how the fitted model uses each feature. They describe model behaviour and association, NOT causation.",
   "top_features": [
     {
-      "Feature": "Online Boarding",
-      "Mean |SHAP|": 0.1180714512241926
+      "Feature": "Seat comfort",
+      "Mean |SHAP|": 1.924050211906433
     },
     {
-      "Feature": "In-flight Wifi Service",
-      "Mean |SHAP|": 0.11118625135649896
+      "Feature": "Inflight entertainment",
+      "Mean |SHAP|": 1.4477216005325317
     },
     {
-      "Feature": "Type of Travel_Personal",
-      "Mean |SHAP|": 0.0725220398317586
+      "Feature": "Customer Type_Loyal Customer",
+      "Mean |SHAP|": 0.999384880065918
     },
     {
-      "Feature": "Type of Travel_Business",
-      "Mean |SHAP|": 0.06051510149947954
+      "Feature": "Type of Travel_Business travel",
+      "Mean |SHAP|": 0.6551278829574585
     },
     {
-      "Feature": "Class_Business",
-      "Mean |SHAP|": 0.04688255885483778
+      "Feature": "Gender_Female",
+      "Mean |SHAP|": 0.6036515235900879
     },
     {
-      "Feature": "Customer Type_Returning",
-      "Mean |SHAP|": 0.031608651872937786
+      "Feature": "Checkin service",
+      "Mean |SHAP|": 0.5761431455612183
     },
     {
-      "Feature": "Customer Type_First-time",
-      "Mean |SHAP|": 0.03151486829718975
+      "Feature": "Leg room service",
+      "Mean |SHAP|": 0.5291903018951416
     },
     {
-      "Feature": "In-flight Entertainment",
-      "Mean |SHAP|": 0.02900792983438286
+      "Feature": "Departure/Arrival time convenient",
+      "Mean |SHAP|": 0.47991272807121277
     },
     {
-      "Feature": "Check-in Service",
-      "Mean |SHAP|": 0.01967411885432431
+      "Feature": "Cleanliness",
+      "Mean |SHAP|": 0.4756348729133606
     },
     {
-      "Feature": "In-flight Service",
-      "Mean |SHAP|": 0.018072960261266407
+      "Feature": "Online support",
+      "Mean |SHAP|": 0.45973673462867737
     }
   ],
   "individual_plot": "shap_individual.png"

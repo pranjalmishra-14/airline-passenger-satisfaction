@@ -1,9 +1,9 @@
 {
-  "final_model": "Neural Net (Deep MLP)",
-  "final_model_kind": "keras",
-  "target": "Satisfaction",
-  "positive_label": "Satisfied",
-  "negative_label": "Neutral or Dissatisfied",
+  "final_model": "XGBoost",
+  "final_model_kind": "sklearn",
+  "target": "satisfaction_v2",
+  "positive_label": "satisfied",
+  "negative_label": "neutral or dissatisfied",
   "raw_features": [
     {
       "name": "Gender",
@@ -18,15 +18,6 @@
       ]
     },
     {
-      "name": "Age",
-      "dtype": "int64",
-      "kind": "numeric",
-      "min": 7.0,
-      "max": 85.0,
-      "median": 40.0,
-      "categories": null
-    },
-    {
       "name": "Customer Type",
       "dtype": "str",
       "kind": "categorical",
@@ -34,9 +25,18 @@
       "max": null,
       "median": null,
       "categories": [
-        "First-time",
-        "Returning"
+        "Loyal Customer",
+        "disloyal Customer"
       ]
+    },
+    {
+      "name": "Age",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 7.0,
+      "max": 85.0,
+      "median": 39.0,
+      "categories": null
     },
     {
       "name": "Type of Travel",
@@ -46,8 +46,8 @@
       "max": null,
       "median": null,
       "categories": [
-        "Business",
-        "Personal"
+        "Business travel",
+        "Personal Travel"
       ]
     },
     {
@@ -59,39 +59,21 @@
       "median": null,
       "categories": [
         "Business",
-        "Economy",
-        "Economy Plus"
+        "Eco",
+        "Eco Plus"
       ]
     },
     {
       "name": "Flight Distance",
       "dtype": "int64",
       "kind": "numeric",
-      "min": 31.0,
-      "max": 4983.0,
-      "median": 842.0,
+      "min": 51.0,
+      "max": 6733.0,
+      "median": 1925.0,
       "categories": null
     },
     {
-      "name": "Departure Delay",
-      "dtype": "int64",
-      "kind": "numeric",
-      "min": 0.0,
-      "max": 1592.0,
-      "median": 0.0,
-      "categories": null
-    },
-    {
-      "name": "Arrival Delay",
-      "dtype": "float64",
-      "kind": "numeric",
-      "min": 0.0,
-      "max": 1584.0,
-      "median": 0.0,
-      "categories": null
-    },
-    {
-      "name": "Departure and Arrival Time Convenience",
+      "name": "Seat comfort",
       "dtype": "int64",
       "kind": "numeric",
       "min": 0.0,
@@ -100,7 +82,7 @@
       "categories": null
     },
     {
-      "name": "Ease of Online Booking",
+      "name": "Departure/Arrival time convenient",
       "dtype": "int64",
       "kind": "numeric",
       "min": 0.0,
@@ -109,7 +91,16 @@
       "categories": null
     },
     {
-      "name": "Check-in Service",
+      "name": "Food and drink",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 0.0,
+      "max": 5.0,
+      "median": 3.0,
+      "categories": null
+    },
+    {
+      "name": "Gate location",
       "dtype": "int64",
       "kind": "numeric",
       "min": 1.0,
@@ -118,7 +109,7 @@
       "categories": null
     },
     {
-      "name": "Online Boarding",
+      "name": "Inflight wifi service",
       "dtype": "int64",
       "kind": "numeric",
       "min": 0.0,
@@ -127,16 +118,7 @@
       "categories": null
     },
     {
-      "name": "Gate Location",
-      "dtype": "int64",
-      "kind": "numeric",
-      "min": 0.0,
-      "max": 5.0,
-      "median": 3.0,
-      "categories": null
-    },
-    {
-      "name": "On-board Service",
+      "name": "Inflight entertainment",
       "dtype": "int64",
       "kind": "numeric",
       "min": 0.0,
@@ -145,7 +127,7 @@
       "categories": null
     },
     {
-      "name": "Seat Comfort",
+      "name": "Online support",
       "dtype": "int64",
       "kind": "numeric",
       "min": 1.0,
@@ -154,66 +136,84 @@
       "categories": null
     },
     {
-      "name": "Leg Room Service",
+      "name": "Ease of Online booking",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 1.0,
+      "max": 5.0,
+      "median": 4.0,
+      "categories": null
+    },
+    {
+      "name": "On-board service",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 1.0,
+      "max": 5.0,
+      "median": 4.0,
+      "categories": null
+    },
+    {
+      "name": "Leg room service",
       "dtype": "int64",
       "kind": "numeric",
       "min": 0.0,
       "max": 5.0,
       "median": 4.0,
+      "categories": null
+    },
+    {
+      "name": "Baggage handling",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 1.0,
+      "max": 5.0,
+      "median": 4.0,
+      "categories": null
+    },
+    {
+      "name": "Checkin service",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 1.0,
+      "max": 5.0,
+      "median": 3.0,
       "categories": null
     },
     {
       "name": "Cleanliness",
       "dtype": "int64",
       "kind": "numeric",
-      "min": 0.0,
-      "max": 5.0,
-      "median": 3.0,
-      "categories": null
-    },
-    {
-      "name": "Food and Drink",
-      "dtype": "int64",
-      "kind": "numeric",
-      "min": 0.0,
-      "max": 5.0,
-      "median": 3.0,
-      "categories": null
-    },
-    {
-      "name": "In-flight Service",
-      "dtype": "int64",
-      "kind": "numeric",
-      "min": 0.0,
+      "min": 1.0,
       "max": 5.0,
       "median": 4.0,
       "categories": null
     },
     {
-      "name": "In-flight Wifi Service",
-      "dtype": "int64",
-      "kind": "numeric",
-      "min": 0.0,
-      "max": 5.0,
-      "median": 3.0,
-      "categories": null
-    },
-    {
-      "name": "In-flight Entertainment",
-      "dtype": "int64",
-      "kind": "numeric",
-      "min": 0.0,
-      "max": 5.0,
-      "median": 4.0,
-      "categories": null
-    },
-    {
-      "name": "Baggage Handling",
+      "name": "Online boarding",
       "dtype": "int64",
       "kind": "numeric",
       "min": 1.0,
       "max": 5.0,
       "median": 4.0,
+      "categories": null
+    },
+    {
+      "name": "Departure Delay in Minutes",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 0.0,
+      "max": 933.0,
+      "median": 0.0,
+      "categories": null
+    },
+    {
+      "name": "Arrival Delay in Minutes",
+      "dtype": "float64",
+      "kind": "numeric",
+      "min": 0.0,
+      "max": 920.0,
+      "median": 0.0,
       "categories": null
     }
   ]

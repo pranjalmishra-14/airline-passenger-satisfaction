@@ -32,6 +32,7 @@ def load_raw(path=None) -> pd.DataFrame:
 def find_target(df: pd.DataFrame) -> str:
     """Locate the target column without assuming an exact spelling."""
     for cand in config.TARGET_CANDIDATES:
+        cand = cand.strip()
         if cand in df.columns:
             return cand
     lowered = {c.lower(): c for c in df.columns}

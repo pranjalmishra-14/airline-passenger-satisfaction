@@ -46,10 +46,13 @@ TEST_SIZE = 0.15
 VAL_SIZE = 0.15          # fraction of the FULL dataset
 TRAIN_SIZE = 1.0 - TEST_SIZE - VAL_SIZE
 
-TARGET_CANDIDATES = ("Satisfaction", "satisfaction")
-POSITIVE_LABEL = "Satisfied"          # class 1
-NEGATIVE_LABEL = "Neutral or Dissatisfied"  # class 0
-
+TARGET_CANDIDATES = (
+    "Satisfaction",
+    "satisfaction",
+    "satisfaction_v2",
+)
+NEGATIVE_LABEL = "neutral or dissatisfied"  # class 0
+POSITIVE_LABEL = "satisfied"
 # ----------------------------------------------------------------------------
 # Mode budgets  (lean scope: full run should finish well under 10 minutes)
 # ----------------------------------------------------------------------------
