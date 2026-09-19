@@ -1,33 +1,33 @@
 Model,Feature,Importance,Std
-Neural Net (Deep MLP),Seat comfort,0.09288888888888891,0.0
-Neural Net (Deep MLP),Inflight entertainment,0.02533333333333332,0.0
-Neural Net (Deep MLP),Gender_Male,0.013333333333333308,0.0
-Neural Net (Deep MLP),Food and drink,0.01244444444444448,0.0
-Neural Net (Deep MLP),Customer Type_disloyal Customer,0.01244444444444448,0.0
-Neural Net (Deep MLP),Checkin service,0.011111111111111072,0.0
-Neural Net (Deep MLP),Customer Type_Loyal Customer,0.010666666666666713,0.0
-Neural Net (Deep MLP),Gender_Female,0.010222222222222244,0.0
-Neural Net (Deep MLP),Type of Travel_Business travel,0.009333333333333305,0.0
-Neural Net (Deep MLP),Departure/Arrival time convenient,0.007555555555555538,0.0
-Neural Net (Deep MLP),Service Quality Score,0.007111111111111068,0.0
-Neural Net (Deep MLP),Age,0.007111111111111068,0.0
-Neural Net (Deep MLP),Ease of Online booking,0.007111111111111068,0.0
-Neural Net (Deep MLP),Total Delay,0.005333333333333301,0.0
-Neural Net (Deep MLP),On-board service,0.005333333333333301,0.0
-Neural Net (Deep MLP),Baggage handling,0.004444444444444473,0.0
-Neural Net (Deep MLP),Leg room service,0.0040000000000000036,0.0
-Neural Net (Deep MLP),Type of Travel_Personal Travel,0.0040000000000000036,0.0
-Neural Net (Deep MLP),Arrival Delay in Minutes,0.0031111111111110645,0.0
-Neural Net (Deep MLP),Cleanliness,0.0031111111111110645,0.0
-Neural Net (Deep MLP),Online support,0.0031111111111110645,0.0
-Neural Net (Deep MLP),Flight Distance,0.002666666666666706,0.0
-Neural Net (Deep MLP),Gate location,0.002666666666666706,0.0
-Neural Net (Deep MLP),Inflight wifi service,0.0022222222222222365,0.0
-Neural Net (Deep MLP),Online boarding,0.0022222222222222365,0.0
-Neural Net (Deep MLP),Flight Distance Category_Long,0.0022222222222222365,0.0
-Neural Net (Deep MLP),Departure Delay in Minutes,0.0013333333333332975,0.0
-Neural Net (Deep MLP),Class_Eco,0.000888888888888939,0.0
-Neural Net (Deep MLP),Flight Distance Category_Short,0.0004444444444444695,0.0
-Neural Net (Deep MLP),Class_Eco Plus,0.0004444444444444695,0.0
-Neural Net (Deep MLP),Class_Business,0.0,0.0
-Neural Net (Deep MLP),Flight Distance Category_Medium,0.0,0.0
+Neural Net (Basic MLP),Seat comfort,0.18066666666666675,0.0016329931618554536
+Neural Net (Basic MLP),Gate location,0.05600000000000005,0.0017847087115787621
+Neural Net (Basic MLP),Baggage handling,0.03700000000000003,0.0009813067629252962
+Neural Net (Basic MLP),Cleanliness,0.03200000000000003,0.0016555182695279006
+Neural Net (Basic MLP),Inflight entertainment,0.023333333333333355,0.0021256807188565294
+Neural Net (Basic MLP),Type of Travel_Business travel,0.01811111111111115,0.0006849348892187477
+Neural Net (Basic MLP),Type of Travel_Personal Travel,0.015777777777777852,0.0010304020550550685
+Neural Net (Basic MLP),Ease of Online booking,0.015333333333333385,0.0007200822998230677
+Neural Net (Basic MLP),Checkin service,0.014222222222222247,0.0036548631563107573
+Neural Net (Basic MLP),Online support,0.013666666666666716,0.000544331053951848
+Neural Net (Basic MLP),Customer Type_Loyal Customer,0.013111111111111148,0.00177081971672328
+Neural Net (Basic MLP),Customer Type_disloyal Customer,0.011000000000000046,0.000272165526975924
+Neural Net (Basic MLP),Gender_Male,0.010888888888888911,0.0006849348892187897
+Neural Net (Basic MLP),Gender_Female,0.010777777777777811,0.0005665577237325563
+Neural Net (Basic MLP),Departure/Arrival time convenient,0.007444444444444513,0.0006849348892187897
+Neural Net (Basic MLP),On-board service,0.006444444444444512,0.002910177967490849
+Neural Net (Basic MLP),Online boarding,0.0058888888888889435,0.0008748897637790972
+Neural Net (Basic MLP),Age,0.005666666666666709,0.0009813067629252962
+Neural Net (Basic MLP),Food and drink,0.005444444444444474,0.0023465235646602887
+Neural Net (Basic MLP),Class_Business,0.004333333333333374,0.0015153535218873377
+Neural Net (Basic MLP),Leg room service,0.003888888888888905,0.00015713484026365994
+Neural Net (Basic MLP),Inflight wifi service,0.003333333333333336,0.00047140452079103207
+Neural Net (Basic MLP),Service Quality Score,0.0024444444444444713,0.0008748897637790972
+Neural Net (Basic MLP),Flight Distance,0.0021111111111111747,0.0003142696805273722
+Neural Net (Basic MLP),Arrival Delay in Minutes,0.0011111111111111367,0.00015713484026371228
+Neural Net (Basic MLP),Total Delay,0.0011111111111111367,0.0006849348892187477
+Neural Net (Basic MLP),Flight Distance Category_Short,0.0010000000000000748,0.00047140452079103207
+Neural Net (Basic MLP),Class_Eco,0.000888888888888939,0.0019116278371206013
+Neural Net (Basic MLP),Flight Distance Category_Long,0.000888888888888902,0.0008314794192830955
+Neural Net (Basic MLP),Departure Delay in Minutes,0.0003333333333333706,0.0011863420280034524
+Neural Net (Basic MLP),Flight Distance Category_Medium,3.700743415417188e-17,0.0007200822998231192
+Neural Net (Basic MLP),Class_Eco Plus,-0.0003333333333332966,0.0

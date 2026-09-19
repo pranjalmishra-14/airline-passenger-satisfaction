@@ -4,43 +4,43 @@
   "top_features": [
     {
       "Feature": "Seat comfort",
-      "Mean |SHAP|": 1.924050211906433
+      "Mean |SHAP|": 2.680657148361206
     },
     {
       "Feature": "Inflight entertainment",
-      "Mean |SHAP|": 1.4477216005325317
+      "Mean |SHAP|": 1.4799913167953491
     },
     {
       "Feature": "Customer Type_Loyal Customer",
-      "Mean |SHAP|": 0.999384880065918
+      "Mean |SHAP|": 1.08104407787323
     },
     {
       "Feature": "Type of Travel_Business travel",
-      "Mean |SHAP|": 0.6551278829574585
+      "Mean |SHAP|": 0.8104029893875122
     },
     {
       "Feature": "Gender_Female",
-      "Mean |SHAP|": 0.6036515235900879
+      "Mean |SHAP|": 0.5982862710952759
     },
     {
-      "Feature": "Checkin service",
-      "Mean |SHAP|": 0.5761431455612183
+      "Feature": "Gate location",
+      "Mean |SHAP|": 0.502818763256073
     },
     {
-      "Feature": "Leg room service",
-      "Mean |SHAP|": 0.5291903018951416
+      "Feature": "Baggage handling",
+      "Mean |SHAP|": 0.5008819103240967
     },
     {
       "Feature": "Departure/Arrival time convenient",
-      "Mean |SHAP|": 0.47991272807121277
+      "Mean |SHAP|": 0.48026490211486816
     },
     {
-      "Feature": "Cleanliness",
-      "Mean |SHAP|": 0.4756348729133606
+      "Feature": "Checkin service",
+      "Mean |SHAP|": 0.365731805562973
     },
     {
       "Feature": "Online support",
-      "Mean |SHAP|": 0.45973673462867737
+      "Mean |SHAP|": 0.36524543166160583
     }
   ],
   "individual_plot": "shap_individual.png"

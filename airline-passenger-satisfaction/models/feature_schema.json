@@ -1,5 +1,5 @@
 {
-  "final_model": "XGBoost",
+  "final_model": "Stacking Ensemble",
   "final_model_kind": "sklearn",
   "target": "satisfaction_v2",
   "positive_label": "satisfied",
@@ -35,7 +35,7 @@
       "kind": "numeric",
       "min": 7.0,
       "max": 85.0,
-      "median": 39.0,
+      "median": 40.0,
       "categories": null
     },
     {
@@ -67,9 +67,9 @@
       "name": "Flight Distance",
       "dtype": "int64",
       "kind": "numeric",
-      "min": 51.0,
-      "max": 6733.0,
-      "median": 1925.0,
+      "min": 50.0,
+      "max": 6924.0,
+      "median": 1926.0,
       "categories": null
     },
     {
@@ -103,7 +103,7 @@
       "name": "Gate location",
       "dtype": "int64",
       "kind": "numeric",
-      "min": 1.0,
+      "min": 0.0,
       "max": 5.0,
       "median": 3.0,
       "categories": null
@@ -130,7 +130,7 @@
       "name": "Online support",
       "dtype": "int64",
       "kind": "numeric",
-      "min": 1.0,
+      "min": 0.0,
       "max": 5.0,
       "median": 4.0,
       "categories": null
@@ -139,7 +139,7 @@
       "name": "Ease of Online booking",
       "dtype": "int64",
       "kind": "numeric",
-      "min": 1.0,
+      "min": 0.0,
       "max": 5.0,
       "median": 4.0,
       "categories": null
@@ -148,7 +148,7 @@
       "name": "On-board service",
       "dtype": "int64",
       "kind": "numeric",
-      "min": 1.0,
+      "min": 0.0,
       "max": 5.0,
       "median": 4.0,
       "categories": null
@@ -175,7 +175,7 @@
       "name": "Checkin service",
       "dtype": "int64",
       "kind": "numeric",
-      "min": 1.0,
+      "min": 0.0,
       "max": 5.0,
       "median": 3.0,
       "categories": null
@@ -184,7 +184,7 @@
       "name": "Cleanliness",
       "dtype": "int64",
       "kind": "numeric",
-      "min": 1.0,
+      "min": 0.0,
       "max": 5.0,
       "median": 4.0,
       "categories": null
@@ -193,9 +193,9 @@
       "name": "Online boarding",
       "dtype": "int64",
       "kind": "numeric",
-      "min": 1.0,
+      "min": 0.0,
       "max": 5.0,
-      "median": 4.0,
+      "median": 3.0,
       "categories": null
     },
     {
@@ -203,7 +203,7 @@
       "dtype": "int64",
       "kind": "numeric",
       "min": 0.0,
-      "max": 933.0,
+      "max": 1592.0,
       "median": 0.0,
       "categories": null
     },
@@ -212,7 +212,7 @@
       "dtype": "float64",
       "kind": "numeric",
       "min": 0.0,
-      "max": 920.0,
+      "max": 1584.0,
       "median": 0.0,
       "categories": null
     }

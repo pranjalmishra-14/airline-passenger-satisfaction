@@ -1,7 +1,7 @@
 {
-  "run_id": "20260919_154530",
-  "timestamp": "2026-09-19T15:45:30",
-  "mode": "fast",
+  "run_id": "20260919_155715",
+  "timestamp": "2026-09-19T15:57:15",
+  "mode": "full",
   "seed": 42,
   "python": "3.13.2",
   "platform": "Windows AMD64",
@@ -14,18 +14,18 @@
     "shap": "0.51.0"
   },
   "budgets": {
-    "sample_rows": 15000,
-    "search_iter": 3,
-    "search_cv": 2,
-    "cv_folds": 3,
-    "epochs": 5,
-    "bootstrap_n": 200,
+    "sample_rows": null,
+    "search_iter": 12,
+    "search_cv": 3,
+    "cv_folds": 5,
+    "epochs": 60,
+    "bootstrap_n": 1000,
     "enable_svm": true
   },
   "split": {
-    "train": 10500,
-    "val": 2250,
-    "test": 2250,
+    "train": 90916,
+    "val": 19482,
+    "test": 19482,
     "fractions": {
       "train": 0.7,
       "val": 0.15,
@@ -41,14 +41,14 @@
   "models": {
     "Dummy Baseline": {
       "family": "baseline",
-      "fit_seconds": 0.06,
-      "predict_seconds": 0.03,
+      "fit_seconds": 0.7,
+      "predict_seconds": 0.12,
       "best_params": null,
       "val_metrics": {
-        "Accuracy": 0.5502,
-        "Precision": 0.5502,
+        "Accuracy": 0.5473,
+        "Precision": 0.5473,
         "Recall": 1.0,
-        "F1": 0.7099,
+        "F1": 0.7074,
         "ROC-AUC": 0.5
       },
       "saved_to": "models\\dummy_baseline.pkl",
@@ -56,186 +56,216 @@
     },
     "Logistic Regression": {
       "family": "classical",
-      "fit_seconds": 0.1,
-      "predict_seconds": 0.06,
+      "fit_seconds": 0.84,
+      "predict_seconds": 0.15,
       "best_params": null,
       "val_metrics": {
-        "Accuracy": 0.8356,
-        "Precision": 0.8506,
-        "Recall": 0.8506,
-        "F1": 0.8506,
-        "ROC-AUC": 0.9106
+        "Accuracy": 0.8369,
+        "Precision": 0.8477,
+        "Recall": 0.8558,
+        "F1": 0.8517,
+        "ROC-AUC": 0.9098
       },
       "saved_to": "models\\logistic_regression.pkl",
       "status": "ok"
     },
     "Decision Tree": {
       "family": "classical",
-      "fit_seconds": 0.14,
-      "predict_seconds": 0.03,
+      "fit_seconds": 1.1,
+      "predict_seconds": 0.16,
       "best_params": null,
       "val_metrics": {
-        "Accuracy": 0.9236,
-        "Precision": 0.9333,
-        "Recall": 0.9273,
-        "F1": 0.9303,
-        "ROC-AUC": 0.9428
+        "Accuracy": 0.9434,
+        "Precision": 0.9522,
+        "Recall": 0.9439,
+        "F1": 0.9481,
+        "ROC-AUC": 0.9787
       },
       "saved_to": "models\\decision_tree.pkl",
       "status": "ok"
     },
     "Random Forest": {
       "family": "ensemble",
-      "fit_seconds": 4.54,
-      "predict_seconds": 0.13,
+      "fit_seconds": 279.84,
+      "predict_seconds": 0.84,
       "best_params": {
         "model__n_estimators": 200,
-        "model__min_samples_split": 2,
+        "model__min_samples_split": 5,
         "model__min_samples_leaf": 1,
-        "model__max_features": "log2",
-        "model__max_depth": 30
+        "model__max_features": 0.5,
+        "model__max_depth": 20
       },
       "val_metrics": {
-        "Accuracy": 0.9342,
-        "Precision": 0.9431,
-        "Recall": 0.937,
-        "F1": 0.94,
-        "ROC-AUC": 0.9857
+        "Accuracy": 0.9587,
+        "Precision": 0.9707,
+        "Recall": 0.9534,
+        "F1": 0.962,
+        "ROC-AUC": 0.9938
       },
       "saved_to": "models\\random_forest.pkl",
       "status": "ok"
     },
     "Support Vector Machine": {
       "family": "classical",
-      "fit_seconds": 1.21,
-      "predict_seconds": 0.75,
+      "fit_seconds": 220.33,
+      "predict_seconds": 73.76,
       "best_params": null,
       "val_metrics": {
-        "Accuracy": 0.9231,
-        "Precision": 0.9284,
-        "Recall": 0.9321,
-        "F1": 0.9303,
-        "ROC-AUC": 0.9777
+        "Accuracy": 0.9418,
+        "Precision": 0.9461,
+        "Recall": 0.9478,
+        "F1": 0.9469,
+        "ROC-AUC": 0.9868
       },
       "saved_to": "models\\support_vector_machine.pkl",
       "status": "ok"
     },
     "K-Nearest Neighbors": {
       "family": "classical",
-      "fit_seconds": 0.07,
-      "predict_seconds": 2.42,
+      "fit_seconds": 0.69,
+      "predict_seconds": 7.58,
       "best_params": null,
       "val_metrics": {
-        "Accuracy": 0.896,
-        "Precision": 0.9261,
-        "Recall": 0.8813,
-        "F1": 0.9031,
-        "ROC-AUC": 0.9632
+        "Accuracy": 0.9191,
+        "Precision": 0.9406,
+        "Recall": 0.9095,
+        "F1": 0.9248,
+        "ROC-AUC": 0.9772
       },
       "saved_to": "models\\k_nearest_neighbors.pkl",
       "status": "ok"
     },
     "XGBoost": {
       "family": "ensemble",
-      "fit_seconds": 7.28,
-      "predict_seconds": 0.16,
+      "fit_seconds": 68.93,
+      "predict_seconds": 0.81,
       "best_params": {
-        "model__subsample": 0.7,
-        "model__n_estimators": 400,
+        "model__subsample": 1.0,
+        "model__n_estimators": 600,
         "model__max_depth": 10,
-        "model__learning_rate": 0.2,
-        "model__colsample_bytree": 0.7
+        "model__learning_rate": 0.1,
+        "model__colsample_bytree": 0.85
       },
       "val_metrics": {
-        "Accuracy": 0.9436,
-        "Precision": 0.9572,
-        "Recall": 0.9394,
-        "F1": 0.9482,
-        "ROC-AUC": 0.9888
+        "Accuracy": 0.9602,
+        "Precision": 0.9692,
+        "Recall": 0.9577,
+        "F1": 0.9634,
+        "ROC-AUC": 0.9947
       },
       "saved_to": "models\\xgboost.pkl",
       "status": "ok"
     },
     "Gradient Boosting": {
       "family": "ensemble",
-      "fit_seconds": 4.41,
-      "predict_seconds": 0.05,
+      "fit_seconds": 82.06,
+      "predict_seconds": 0.5,
       "best_params": null,
       "val_metrics": {
-        "Accuracy": 0.9329,
-        "Precision": 0.9437,
-        "Recall": 0.9338,
-        "F1": 0.9387,
-        "ROC-AUC": 0.9819
+        "Accuracy": 0.9341,
+        "Precision": 0.9367,
+        "Recall": 0.9434,
+        "F1": 0.94,
+        "ROC-AUC": 0.9844
       },
       "saved_to": "models\\gradient_boosting.pkl",
       "status": "ok"
     },
     "Extra Trees": {
       "family": "ensemble",
-      "fit_seconds": 1.54,
-      "predict_seconds": 0.41,
+      "fit_seconds": 14.91,
+      "predict_seconds": 1.33,
       "best_params": null,
       "val_metrics": {
-        "Accuracy": 0.9373,
-        "Precision": 0.9478,
-        "Recall": 0.9378,
-        "F1": 0.9428,
-        "ROC-AUC": 0.9871
+        "Accuracy": 0.9525,
+        "Precision": 0.9586,
+        "Recall": 0.9544,
+        "F1": 0.9565,
+        "ROC-AUC": 0.9922
       },
       "saved_to": "models\\extra_trees.pkl",
       "status": "ok"
     },
+    "Voting Ensemble": {
+      "family": "ensemble",
+      "fit_seconds": 15.24,
+      "predict_seconds": 0.95,
+      "best_params": null,
+      "val_metrics": {
+        "Accuracy": 0.9597,
+        "Precision": 0.9672,
+        "Recall": 0.9589,
+        "F1": 0.963,
+        "ROC-AUC": 0.994
+      },
+      "saved_to": "models\\voting_ensemble.pkl",
+      "status": "ok"
+    },
+    "Stacking Ensemble": {
+      "family": "ensemble",
+      "fit_seconds": 20.33,
+      "predict_seconds": 0.44,
+      "best_params": null,
+      "val_metrics": {
+        "Accuracy": 0.9597,
+        "Precision": 0.9655,
+        "Recall": 0.9607,
+        "F1": 0.9631,
+        "ROC-AUC": 0.9942
+      },
+      "saved_to": "models\\stacking_ensemble.pkl",
+      "status": "ok"
+    },
     "Neural Net (Basic MLP)": {
       "family": "deep",
-      "fit_seconds": 3.79,
-      "predict_seconds": 0.27,
-      "epochs_run": 5,
-      "epochs_budget": 5,
+      "fit_seconds": 169.21,
+      "predict_seconds": 1.92,
+      "epochs_run": 54,
+      "epochs_budget": 60,
       "parameters": 43009,
       "architecture": "Two hidden blocks, dropout 0.3.",
       "val_metrics": {
-        "Accuracy": 0.9164,
-        "Precision": 0.9051,
-        "Recall": 0.9475,
-        "F1": 0.9258,
-        "ROC-AUC": 0.9736
+        "Accuracy": 0.9601,
+        "Precision": 0.9735,
+        "Recall": 0.953,
+        "F1": 0.9631,
+        "ROC-AUC": 0.9947
       },
       "saved_to": "models\\neural_net_basic_mlp.keras",
       "status": "ok"
     },
     "Neural Net (Regularized MLP)": {
       "family": "deep",
-      "fit_seconds": 2.93,
-      "predict_seconds": 0.28,
-      "epochs_run": 5,
-      "epochs_budget": 5,
+      "fit_seconds": 131.06,
+      "predict_seconds": 0.65,
+      "epochs_run": 60,
+      "epochs_budget": 60,
       "parameters": 43009,
       "architecture": "L2 1e-4 + dropout 0.45.",
       "val_metrics": {
-        "Accuracy": 0.9067,
-        "Precision": 0.9016,
-        "Recall": 0.9321,
-        "F1": 0.9166,
-        "ROC-AUC": 0.9689
+        "Accuracy": 0.9579,
+        "Precision": 0.9791,
+        "Recall": 0.9432,
+        "F1": 0.9608,
+        "ROC-AUC": 0.9945
       },
       "saved_to": "models\\neural_net_regularized_mlp.keras",
       "status": "ok"
     },
     "Neural Net (Deep MLP)": {
       "family": "deep",
-      "fit_seconds": 3.76,
-      "predict_seconds": 0.25,
-      "epochs_run": 5,
-      "epochs_budget": 5,
+      "fit_seconds": 114.7,
+      "predict_seconds": 0.66,
+      "epochs_run": 50,
+      "epochs_budget": 60,
       "parameters": 112513,
       "architecture": "Four hidden blocks, tapering width.",
       "val_metrics": {
-        "Accuracy": 0.9213,
-        "Precision": 0.9352,
-        "Recall": 0.9208,
-        "F1": 0.928,
-        "ROC-AUC": 0.9768
+        "Accuracy": 0.9591,
+        "Precision": 0.9774,
+        "Recall": 0.9471,
+        "F1": 0.962,
+        "ROC-AUC": 0.9948
       },
       "saved_to": "models\\neural_net_deep_mlp.keras",
       "status": "ok"
@@ -244,9 +274,9 @@
   "failures": {},
   "notes": [
     "Test set was evaluated exactly once, after model selection on validation.",
-    "Tuning budget: 3 candidates x 2 folds (train only)."
+    "Tuning budget: 12 candidates x 3 folds (train only)."
   ],
-  "final_model": "XGBoost",
+  "final_model": "Stacking Ensemble",
   "reference_benchmarks": {
     "source": "ICSADL 2026, Random Forest",
     "accuracy": 0.9583,
@@ -258,43 +288,43 @@
     "top_features": [
       {
         "Feature": "Seat comfort",
-        "Mean |SHAP|": 1.924050211906433
+        "Mean |SHAP|": 2.680657148361206
       },
       {
         "Feature": "Inflight entertainment",
-        "Mean |SHAP|": 1.4477216005325317
+        "Mean |SHAP|": 1.4799913167953491
       },
       {
         "Feature": "Customer Type_Loyal Customer",
-        "Mean |SHAP|": 0.999384880065918
+        "Mean |SHAP|": 1.08104407787323
       },
       {
         "Feature": "Type of Travel_Business travel",
-        "Mean |SHAP|": 0.6551278829574585
+        "Mean |SHAP|": 0.8104029893875122
       },
       {
         "Feature": "Gender_Female",
-        "Mean |SHAP|": 0.6036515235900879
+        "Mean |SHAP|": 0.5982862710952759
       },
       {
-        "Feature": "Checkin service",
-        "Mean |SHAP|": 0.5761431455612183
+        "Feature": "Gate location",
+        "Mean |SHAP|": 0.502818763256073
       },
       {
-        "Feature": "Leg room service",
-        "Mean |SHAP|": 0.5291903018951416
+        "Feature": "Baggage handling",
+        "Mean |SHAP|": 0.5008819103240967
       },
       {
         "Feature": "Departure/Arrival time convenient",
-        "Mean |SHAP|": 0.47991272807121277
+        "Mean |SHAP|": 0.48026490211486816
       },
       {
-        "Feature": "Cleanliness",
-        "Mean |SHAP|": 0.4756348729133606
+        "Feature": "Checkin service",
+        "Mean |SHAP|": 0.365731805562973
       },
       {
         "Feature": "Online support",
-        "Mean |SHAP|": 0.45973673462867737
+        "Mean |SHAP|": 0.36524543166160583
       }
     ]
   }

@@ -1,161 +1,161 @@
 Model,Feature,Importance
-Decision Tree,Age,0.021126173668526566
-Decision Tree,Flight Distance,0.015598387612039513
-Decision Tree,Seat comfort,0.18103350796441245
-Decision Tree,Departure/Arrival time convenient,0.02272541499802828
-Decision Tree,Food and drink,0.02182024993086183
-Decision Tree,Gate location,0.016247935205949176
-Decision Tree,Inflight wifi service,0.004086322128413275
-Decision Tree,Inflight entertainment,0.40266607550623057
-Decision Tree,Online support,0.0185017913749526
-Decision Tree,Ease of Online booking,0.06819412120022406
-Decision Tree,On-board service,0.006742920128198802
-Decision Tree,Leg room service,0.01676888734486771
-Decision Tree,Baggage handling,0.011060304154998783
-Decision Tree,Checkin service,0.02861045685936974
-Decision Tree,Cleanliness,0.01664035836215814
-Decision Tree,Online boarding,0.009143518791287211
-Decision Tree,Departure Delay in Minutes,0.004378041429158374
-Decision Tree,Arrival Delay in Minutes,0.00890168406572388
-Decision Tree,Total Delay,0.011023481301824024
-Decision Tree,Service Quality Score,0.008063322577912037
-Decision Tree,Gender_Female,0.008052752711392289
-Decision Tree,Gender_Male,0.0
-Decision Tree,Customer Type_Loyal Customer,0.009242641686942577
-Decision Tree,Customer Type_disloyal Customer,0.038107567562061156
-Decision Tree,Type of Travel_Business travel,0.020915454118160905
-Decision Tree,Type of Travel_Personal Travel,0.004645555429069211
-Decision Tree,Class_Business,0.022280433274018168
-Decision Tree,Class_Eco,0.001681774017693642
-Decision Tree,Class_Eco Plus,0.00027345876464846545
-Decision Tree,Flight Distance Category_Long,0.00027345876464846545
-Decision Tree,Flight Distance Category_Medium,0.0006030828068982886
-Decision Tree,Flight Distance Category_Short,0.0005908662593297201
-Random Forest,Age,0.028440496688237286
-Random Forest,Flight Distance,0.030003379907533316
-Random Forest,Seat comfort,0.10492357760519076
-Random Forest,Departure/Arrival time convenient,0.02218077936997552
-Random Forest,Food and drink,0.0400410447163502
-Random Forest,Gate location,0.018715248697732324
-Random Forest,Inflight wifi service,0.01467152506286818
-Random Forest,Inflight entertainment,0.1650243288832922
-Random Forest,Online support,0.053004249921770934
-Random Forest,Ease of Online booking,0.06434249886897181
-Random Forest,On-board service,0.03169351469010308
-Random Forest,Leg room service,0.03760761257677091
-Random Forest,Baggage handling,0.022003236151574256
-Random Forest,Checkin service,0.025016927865178597
-Random Forest,Cleanliness,0.023268054699719185
-Random Forest,Online boarding,0.030468383984387806
-Random Forest,Departure Delay in Minutes,0.01320158993347989
-Random Forest,Arrival Delay in Minutes,0.014347331516062097
-Random Forest,Total Delay,0.015911244143140976
-Random Forest,Service Quality Score,0.07375319601148242
-Random Forest,Gender_Female,0.017942188966577205
-Random Forest,Gender_Male,0.020357396287778037
-Random Forest,Customer Type_Loyal Customer,0.024703606434653944
-Random Forest,Customer Type_disloyal Customer,0.026564591641916515
-Random Forest,Type of Travel_Business travel,0.016965667143987125
-Random Forest,Type of Travel_Personal Travel,0.01688346844965109
-Random Forest,Class_Business,0.02196072386705188
-Random Forest,Class_Eco,0.012669110201346466
-Random Forest,Class_Eco Plus,0.0024962360984203927
-Random Forest,Flight Distance Category_Long,0.0031427566752463007
-Random Forest,Flight Distance Category_Medium,0.0037025215746371285
-Random Forest,Flight Distance Category_Short,0.003993511364912121
-XGBoost,Age,0.008691785857081413
-XGBoost,Flight Distance,0.007787920068949461
-XGBoost,Seat comfort,0.08991708606481552
-XGBoost,Departure/Arrival time convenient,0.010462869890034199
-XGBoost,Food and drink,0.03209342062473297
-XGBoost,Gate location,0.015524428337812424
-XGBoost,Inflight wifi service,0.010945240966975689
-XGBoost,Inflight entertainment,0.2556186020374298
-XGBoost,Online support,0.024920636788010597
-XGBoost,Ease of Online booking,0.011282326653599739
-XGBoost,On-board service,0.015038448385894299
-XGBoost,Leg room service,0.023461582139134407
-XGBoost,Baggage handling,0.014442813582718372
-XGBoost,Checkin service,0.01464453898370266
-XGBoost,Cleanliness,0.015466621145606041
-XGBoost,Online boarding,0.01596951298415661
-XGBoost,Departure Delay in Minutes,0.008704004809260368
-XGBoost,Arrival Delay in Minutes,0.008227485232055187
-XGBoost,Total Delay,0.007681781891733408
-XGBoost,Service Quality Score,0.02251451089978218
-XGBoost,Gender_Female,0.028310304507613182
-XGBoost,Gender_Male,0.027216343209147453
-XGBoost,Customer Type_Loyal Customer,0.04720623046159744
-XGBoost,Customer Type_disloyal Customer,0.07509466260671616
-XGBoost,Type of Travel_Business travel,0.027463985607028008
-XGBoost,Type of Travel_Personal Travel,0.06033080443739891
-XGBoost,Class_Business,0.05146067589521408
-XGBoost,Class_Eco,0.011391514912247658
-XGBoost,Class_Eco Plus,0.010322567075490952
-XGBoost,Flight Distance Category_Long,0.004314489662647247
-XGBoost,Flight Distance Category_Medium,0.004813191015273333
-XGBoost,Flight Distance Category_Short,0.038679614663124084
-Gradient Boosting,Age,0.003102262462630102
-Gradient Boosting,Flight Distance,0.003977582143410367
-Gradient Boosting,Seat comfort,0.2175719519263657
-Gradient Boosting,Departure/Arrival time convenient,0.010616509492404485
-Gradient Boosting,Food and drink,0.003334314177920745
-Gradient Boosting,Gate location,0.006216663123506327
-Gradient Boosting,Inflight wifi service,0.00139405852700027
-Gradient Boosting,Inflight entertainment,0.481439104696714
-Gradient Boosting,Online support,0.016609607418829987
-Gradient Boosting,Ease of Online booking,0.06277233562031584
-Gradient Boosting,On-board service,0.015883980781154283
-Gradient Boosting,Leg room service,0.02687616751082362
-Gradient Boosting,Baggage handling,0.007033646929704194
-Gradient Boosting,Checkin service,0.02745706836243896
-Gradient Boosting,Cleanliness,0.0076435544004766895
-Gradient Boosting,Online boarding,0.0036206983691244392
-Gradient Boosting,Departure Delay in Minutes,0.0012618682766419008
-Gradient Boosting,Arrival Delay in Minutes,0.0040690730942058335
-Gradient Boosting,Total Delay,0.0003401821778935162
-Gradient Boosting,Service Quality Score,0.006051220409737759
-Gradient Boosting,Gender_Female,0.006448039492082689
-Gradient Boosting,Gender_Male,0.00789395186817342
-Gradient Boosting,Customer Type_Loyal Customer,0.014692017637146849
-Gradient Boosting,Customer Type_disloyal Customer,0.017801562718903725
-Gradient Boosting,Type of Travel_Business travel,0.016912220066339773
-Gradient Boosting,Type of Travel_Personal Travel,0.00855817993471479
-Gradient Boosting,Class_Business,0.020422178381339754
-Gradient Boosting,Class_Eco,0.0
+Decision Tree,Age,0.010576273635832708
+Decision Tree,Flight Distance,0.007475810572901231
+Decision Tree,Seat comfort,0.20035747880569588
+Decision Tree,Departure/Arrival time convenient,0.015616923203808792
+Decision Tree,Food and drink,0.00750272684528113
+Decision Tree,Gate location,0.016061158253254
+Decision Tree,Inflight wifi service,0.002706946314955934
+Decision Tree,Inflight entertainment,0.44684009484144444
+Decision Tree,Online support,0.010675110546148888
+Decision Tree,Ease of Online booking,0.06782315385859695
+Decision Tree,On-board service,0.004166633384393791
+Decision Tree,Leg room service,0.01094143969717143
+Decision Tree,Baggage handling,0.011476654484749946
+Decision Tree,Checkin service,0.024094403011661023
+Decision Tree,Cleanliness,0.01434898751521905
+Decision Tree,Online boarding,0.011526162647568755
+Decision Tree,Departure Delay in Minutes,0.0012877501580331391
+Decision Tree,Arrival Delay in Minutes,0.005656281504908181
+Decision Tree,Total Delay,0.0031681736263952766
+Decision Tree,Service Quality Score,0.0026035846949242687
+Decision Tree,Gender_Female,0.007383313079206207
+Decision Tree,Gender_Male,0.01115959492775896
+Decision Tree,Customer Type_Loyal Customer,0.0031721606509312007
+Decision Tree,Customer Type_disloyal Customer,0.03763462472845205
+Decision Tree,Type of Travel_Business travel,0.011652904157439017
+Decision Tree,Type of Travel_Personal Travel,0.029455188840211886
+Decision Tree,Class_Business,0.023462629162272243
+Decision Tree,Class_Eco,0.0005240385005176208
+Decision Tree,Class_Eco Plus,0.0001762095635712314
+Decision Tree,Flight Distance Category_Long,7.182471162996196e-05
+Decision Tree,Flight Distance Category_Medium,0.0001808229111595796
+Decision Tree,Flight Distance Category_Short,0.0002209411639052231
+Random Forest,Age,0.020259975788127393
+Random Forest,Flight Distance,0.020917718579086385
+Random Forest,Seat comfort,0.15324387437480907
+Random Forest,Departure/Arrival time convenient,0.018463146567594912
+Random Forest,Food and drink,0.02906976541213728
+Random Forest,Gate location,0.01763766625828286
+Random Forest,Inflight wifi service,0.009806371979861088
+Random Forest,Inflight entertainment,0.30249268679869495
+Random Forest,Online support,0.04051904278279296
+Random Forest,Ease of Online booking,0.055451307159641146
+Random Forest,On-board service,0.02177116167425136
+Random Forest,Leg room service,0.020691829601386123
+Random Forest,Baggage handling,0.0168432918248884
+Random Forest,Checkin service,0.01908270022583275
+Random Forest,Cleanliness,0.01753316987871234
+Random Forest,Online boarding,0.016962766140148675
+Random Forest,Departure Delay in Minutes,0.006771491849172486
+Random Forest,Arrival Delay in Minutes,0.009003174940667451
+Random Forest,Total Delay,0.00959316765720212
+Random Forest,Service Quality Score,0.06631843376963444
+Random Forest,Gender_Female,0.015526888011708083
+Random Forest,Gender_Male,0.013369848648422606
+Random Forest,Customer Type_Loyal Customer,0.020285148397109338
+Random Forest,Customer Type_disloyal Customer,0.01795253781498868
+Random Forest,Type of Travel_Business travel,0.015698949085218225
+Random Forest,Type of Travel_Personal Travel,0.015940743247419557
+Random Forest,Class_Business,0.019777726041425102
+Random Forest,Class_Eco,0.004716316119142631
+Random Forest,Class_Eco Plus,0.0008842452351313665
+Random Forest,Flight Distance Category_Long,0.000740515358645287
+Random Forest,Flight Distance Category_Medium,0.0009769967296040531
+Random Forest,Flight Distance Category_Short,0.0016973420482609268
+XGBoost,Age,0.004940401297062635
+XGBoost,Flight Distance,0.0034221967216581106
+XGBoost,Seat comfort,0.16743221879005432
+XGBoost,Departure/Arrival time convenient,0.015279517509043217
+XGBoost,Food and drink,0.014959744177758694
+XGBoost,Gate location,0.01237046904861927
+XGBoost,Inflight wifi service,0.004664674401283264
+XGBoost,Inflight entertainment,0.28727859258651733
+XGBoost,Online support,0.021724514663219452
+XGBoost,Ease of Online booking,0.028096327558159828
+XGBoost,On-board service,0.01008087769150734
+XGBoost,Leg room service,0.00962976273149252
+XGBoost,Baggage handling,0.011108585633337498
+XGBoost,Checkin service,0.010198857635259628
+XGBoost,Cleanliness,0.012291803024709225
+XGBoost,Online boarding,0.012004079297184944
+XGBoost,Departure Delay in Minutes,0.0033359630033373833
+XGBoost,Arrival Delay in Minutes,0.004421492572873831
+XGBoost,Total Delay,0.0042639668099582195
+XGBoost,Service Quality Score,0.012987107038497925
+XGBoost,Gender_Female,0.03432498499751091
+XGBoost,Gender_Male,0.005818873643875122
+XGBoost,Customer Type_Loyal Customer,0.06589110195636749
+XGBoost,Customer Type_disloyal Customer,0.09854448586702347
+XGBoost,Type of Travel_Business travel,0.03191835433244705
+XGBoost,Type of Travel_Personal Travel,0.04076630622148514
+XGBoost,Class_Business,0.04597758501768112
+XGBoost,Class_Eco,0.005120525136590004
+XGBoost,Class_Eco Plus,0.0042496356181800365
+XGBoost,Flight Distance Category_Long,0.0025569298304617405
+XGBoost,Flight Distance Category_Medium,0.003053445601835847
+XGBoost,Flight Distance Category_Short,0.011286602355539799
+Gradient Boosting,Age,0.0025184735583895553
+Gradient Boosting,Flight Distance,0.0005622109320820724
+Gradient Boosting,Seat comfort,0.22804948888249352
+Gradient Boosting,Departure/Arrival time convenient,0.013167529355234183
+Gradient Boosting,Food and drink,0.00011538676084835652
+Gradient Boosting,Gate location,0.005760079696718092
+Gradient Boosting,Inflight wifi service,0.001145392699120071
+Gradient Boosting,Inflight entertainment,0.48511460289762687
+Gradient Boosting,Online support,0.01822872537184556
+Gradient Boosting,Ease of Online booking,0.057764232743650966
+Gradient Boosting,On-board service,0.017888634527921044
+Gradient Boosting,Leg room service,0.022315609719754867
+Gradient Boosting,Baggage handling,0.006306530268410168
+Gradient Boosting,Checkin service,0.02036760551809788
+Gradient Boosting,Cleanliness,0.005810876990117754
+Gradient Boosting,Online boarding,0.0074840875674726335
+Gradient Boosting,Departure Delay in Minutes,1.3395851670766712e-05
+Gradient Boosting,Arrival Delay in Minutes,0.003240198825632071
+Gradient Boosting,Total Delay,0.0008042724241169055
+Gradient Boosting,Service Quality Score,0.001619270614260235
+Gradient Boosting,Gender_Female,0.009230181887762971
+Gradient Boosting,Gender_Male,0.00945701731600196
+Gradient Boosting,Customer Type_Loyal Customer,0.017734561208573054
+Gradient Boosting,Customer Type_disloyal Customer,0.01395780813323979
+Gradient Boosting,Type of Travel_Business travel,0.020082924329875542
+Gradient Boosting,Type of Travel_Personal Travel,0.010336929219828497
+Gradient Boosting,Class_Business,0.020862726912191595
+Gradient Boosting,Class_Eco,5.47975530791091e-06
 Gradient Boosting,Class_Eco Plus,0.0
 Gradient Boosting,Flight Distance Category_Long,0.0
-Gradient Boosting,Flight Distance Category_Medium,0.0
+Gradient Boosting,Flight Distance Category_Medium,5.5766031755071006e-05
 Gradient Boosting,Flight Distance Category_Short,0.0
-Extra Trees,Age,0.01792552788001684
-Extra Trees,Flight Distance,0.015514837184480988
-Extra Trees,Seat comfort,0.08962126664512675
-Extra Trees,Departure/Arrival time convenient,0.021811308267413787
-Extra Trees,Food and drink,0.039745151448948815
-Extra Trees,Gate location,0.01952004232823242
-Extra Trees,Inflight wifi service,0.015873881313394563
-Extra Trees,Inflight entertainment,0.11627997263685792
-Extra Trees,Online support,0.05100256691355321
-Extra Trees,Ease of Online booking,0.06552301601426355
-Extra Trees,On-board service,0.03361629588646487
-Extra Trees,Leg room service,0.03165212508771519
-Extra Trees,Baggage handling,0.026404750553589356
-Extra Trees,Checkin service,0.03104829307040621
-Extra Trees,Cleanliness,0.02822047608847705
-Extra Trees,Online boarding,0.03135709644053628
-Extra Trees,Departure Delay in Minutes,0.012507540521861295
-Extra Trees,Arrival Delay in Minutes,0.012974873746727797
-Extra Trees,Total Delay,0.013185203891380531
-Extra Trees,Service Quality Score,0.052084803990734424
-Extra Trees,Gender_Female,0.03097711687795502
-Extra Trees,Gender_Male,0.03495878057044657
-Extra Trees,Customer Type_Loyal Customer,0.03552303590374343
-Extra Trees,Customer Type_disloyal Customer,0.035821000141350846
-Extra Trees,Type of Travel_Business travel,0.027903939792045567
-Extra Trees,Type of Travel_Personal Travel,0.02661975709861589
-Extra Trees,Class_Business,0.03657919975286956
-Extra Trees,Class_Eco,0.022722230473167015
-Extra Trees,Class_Eco Plus,0.00371848865403688
-Extra Trees,Flight Distance Category_Long,0.005802005332665492
-Extra Trees,Flight Distance Category_Medium,0.0063711898769618506
-Extra Trees,Flight Distance Category_Short,0.007134225615960024
+Extra Trees,Age,0.01787449796729775
+Extra Trees,Flight Distance,0.014953486406041107
+Extra Trees,Seat comfort,0.10652910593513527
+Extra Trees,Departure/Arrival time convenient,0.023466904237558477
+Extra Trees,Food and drink,0.038088085703120333
+Extra Trees,Gate location,0.019705166571183083
+Extra Trees,Inflight wifi service,0.014150731255501302
+Extra Trees,Inflight entertainment,0.1127058062402816
+Extra Trees,Online support,0.04751351996570006
+Extra Trees,Ease of Online booking,0.051418230683769245
+Extra Trees,On-board service,0.0331967221834085
+Extra Trees,Leg room service,0.03252353656375944
+Extra Trees,Baggage handling,0.03038743419466133
+Extra Trees,Checkin service,0.027817060557007677
+Extra Trees,Cleanliness,0.028436711740010293
+Extra Trees,Online boarding,0.033853482994727964
+Extra Trees,Departure Delay in Minutes,0.011015536418540004
+Extra Trees,Arrival Delay in Minutes,0.011137185224904997
+Extra Trees,Total Delay,0.011962729384059453
+Extra Trees,Service Quality Score,0.04804921653594661
+Extra Trees,Gender_Female,0.03543066559574095
+Extra Trees,Gender_Male,0.034555637579801374
+Extra Trees,Customer Type_Loyal Customer,0.03760767458236018
+Extra Trees,Customer Type_disloyal Customer,0.0360823832786069
+Extra Trees,Type of Travel_Business travel,0.027694712035444238
+Extra Trees,Type of Travel_Personal Travel,0.03001287826527425
+Extra Trees,Class_Business,0.04011616123330903
+Extra Trees,Class_Eco,0.024009418540823287
+Extra Trees,Class_Eco Plus,0.003428350352903934
+Extra Trees,Flight Distance Category_Long,0.004047668906355976
+Extra Trees,Flight Distance Category_Medium,0.004758416695403326
+Extra Trees,Flight Distance Category_Short,0.007470882171362049

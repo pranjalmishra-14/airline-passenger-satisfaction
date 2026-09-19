@@ -1,33 +1,33 @@
 Feature,Mean |SHAP|
-Seat comfort,1.9240502
-Inflight entertainment,1.4477216
-Customer Type_Loyal Customer,0.9993849
-Type of Travel_Business travel,0.6551279
-Gender_Female,0.6036515
-Checkin service,0.57614315
-Leg room service,0.5291903
-Departure/Arrival time convenient,0.47991273
-Cleanliness,0.47563487
-Online support,0.45973673
-Service Quality Score,0.43607163
-Baggage handling,0.4007284
-Age,0.3948317
-Ease of Online booking,0.38599575
-Flight Distance,0.38440728
-Food and drink,0.34862226
-Gate location,0.34631807
-Arrival Delay in Minutes,0.32263693
-Class_Business,0.32133037
-On-board service,0.25203502
-Type of Travel_Personal Travel,0.242026
-Online boarding,0.23740569
-Inflight wifi service,0.20722479
-Customer Type_disloyal Customer,0.2044213
-Total Delay,0.17703304
-Departure Delay in Minutes,0.15867256
-Gender_Male,0.14261505
-Class_Eco,0.11671811
-Flight Distance Category_Short,0.056935836
-Flight Distance Category_Medium,0.04680858
-Class_Eco Plus,0.027843345
-Flight Distance Category_Long,0.017802848
+Seat comfort,2.6806571
+Inflight entertainment,1.4799913
+Customer Type_Loyal Customer,1.0810441
+Type of Travel_Business travel,0.810403
+Gender_Female,0.5982863
+Gate location,0.50281876
+Baggage handling,0.5008819
+Departure/Arrival time convenient,0.4802649
+Checkin service,0.3657318
+Online support,0.36524543
+Cleanliness,0.3581941
+Service Quality Score,0.34340364
+Age,0.34231532
+Ease of Online booking,0.32942823
+Leg room service,0.3228667
+Food and drink,0.3083821
+Class_Business,0.29712814
+Flight Distance,0.29500616
+Online boarding,0.25821355
+Arrival Delay in Minutes,0.24357763
+On-board service,0.23651996
+Customer Type_disloyal Customer,0.14144386
+Type of Travel_Personal Travel,0.13782603
+Inflight wifi service,0.12759681
+Departure Delay in Minutes,0.113188155
+Total Delay,0.1068798
+Class_Eco,0.075421594
+Gender_Male,0.04751195
+Class_Eco Plus,0.025416987
+Flight Distance Category_Medium,0.024205917
+Flight Distance Category_Long,0.012325404
+Flight Distance Category_Short,0.011330356
