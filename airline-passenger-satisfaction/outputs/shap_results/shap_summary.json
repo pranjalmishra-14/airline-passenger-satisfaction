@@ -1,0 +1,47 @@
+{
+  "model": "Random Forest",
+  "disclaimer": "SHAP values explain how the fitted model uses each feature. They describe model behaviour and association, NOT causation.",
+  "top_features": [
+    {
+      "Feature": "Online Boarding",
+      "Mean |SHAP|": 0.1180714512241926
+    },
+    {
+      "Feature": "In-flight Wifi Service",
+      "Mean |SHAP|": 0.11118625135649896
+    },
+    {
+      "Feature": "Type of Travel_Personal",
+      "Mean |SHAP|": 0.0725220398317586
+    },
+    {
+      "Feature": "Type of Travel_Business",
+      "Mean |SHAP|": 0.06051510149947954
+    },
+    {
+      "Feature": "Class_Business",
+      "Mean |SHAP|": 0.04688255885483778
+    },
+    {
+      "Feature": "Customer Type_Returning",
+      "Mean |SHAP|": 0.031608651872937786
+    },
+    {
+      "Feature": "Customer Type_First-time",
+      "Mean |SHAP|": 0.03151486829718975
+    },
+    {
+      "Feature": "In-flight Entertainment",
+      "Mean |SHAP|": 0.02900792983438286
+    },
+    {
+      "Feature": "Check-in Service",
+      "Mean |SHAP|": 0.01967411885432431
+    },
+    {
+      "Feature": "In-flight Service",
+      "Mean |SHAP|": 0.018072960261266407
+    }
+  ],
+  "individual_plot": "shap_individual.png"
+}

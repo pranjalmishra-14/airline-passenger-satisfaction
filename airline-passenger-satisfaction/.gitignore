@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# Dataset -- obtain separately (see data/README.md). The full 12 MB CSV is not
+# committed; an 8,000-row stratified sample IS, so the deployed Data Explorer
+# page works without it. Class balance and all category levels are preserved.
+data/*.csv
+!data/sample_for_app.csv
+
+# ---------------------------------------------------------------------------
+# Model artifacts
+#
+# The deployed app must never retrain, so the artifacts it loads ARE committed.
+# Large models are excluded because they exceed GitHub's 100 MB per-file limit
+# and would blow Streamlit Community Cloud's ~1 GB memory budget:
+#
+#   extra_trees.pkl     105 MB  -- over GitHub's hard limit
+#   voting_ensemble.pkl  99 MB  -- near the limit, no benefit over Random Forest
+#   stacking_ensemble    28 MB  -- statistically tied with Random Forest
+#   k_nearest_neighbors   3.8 MB -- stores the full training set
+#
+# Everything the app actually needs totals ~15 MB and is committed below.
+# Regenerate the excluded models locally with: python train.py --mode full
+# ---------------------------------------------------------------------------
+models/*.pkl
+models/*.keras
+
+# Committed: the final model pointer, its schema, and the models the app offers
+!models/best_model.pkl
+!models/feature_schema.json
+!models/dl_preprocessor.pkl
+!models/neural_net_deep_mlp.keras
+!models/random_forest.pkl
+!models/xgboost.pkl
+!models/logistic_regression.pkl
+
+# Generated outputs: figures and result tables are committed so the report and
+# README stay verifiable without a re-run.
+outputs/**/*.tmp

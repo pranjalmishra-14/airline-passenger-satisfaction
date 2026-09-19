@@ -1,0 +1,331 @@
+{
+  "run_id": "20260919_123925",
+  "timestamp": "2026-09-19T12:39:25",
+  "mode": "full",
+  "seed": 42,
+  "python": "3.11.15",
+  "platform": "Darwin arm64",
+  "library_versions": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.6",
+    "sklearn": "1.9.1",
+    "xgboost": "3.2.0",
+    "tensorflow": "2.21.0",
+    "shap": "0.51.0"
+  },
+  "budgets": {
+    "sample_rows": null,
+    "search_iter": 12,
+    "search_cv": 3,
+    "cv_folds": 5,
+    "epochs": 60,
+    "bootstrap_n": 1000,
+    "enable_svm": true
+  },
+  "split": {
+    "train": 90916,
+    "val": 19482,
+    "test": 19482,
+    "fractions": {
+      "train": 0.7,
+      "val": 0.15,
+      "test": 0.15
+    },
+    "dropped_columns": {
+      "ID": "unique identifier (129880 distinct values, one per row)"
+    },
+    "target": "Satisfaction",
+    "n_raw_features": 22,
+    "positive_label": "Satisfied"
+  },
+  "models": {
+    "Dummy Baseline": {
+      "family": "baseline",
+      "fit_seconds": 0.19,
+      "predict_seconds": 0.04,
+      "best_params": null,
+      "val_metrics": {
+        "Accuracy": 0.5655,
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1": 0.0,
+        "ROC-AUC": 0.5
+      },
+      "saved_to": "models/dummy_baseline.pkl",
+      "status": "ok"
+    },
+    "Logistic Regression": {
+      "family": "classical",
+      "fit_seconds": 0.23,
+      "predict_seconds": 0.05,
+      "best_params": null,
+      "val_metrics": {
+        "Accuracy": 0.8717,
+        "Precision": 0.868,
+        "Recall": 0.8312,
+        "F1": 0.8492,
+        "ROC-AUC": 0.9242
+      },
+      "saved_to": "models/logistic_regression.pkl",
+      "status": "ok"
+    },
+    "Decision Tree": {
+      "family": "classical",
+      "fit_seconds": 0.48,
+      "predict_seconds": 0.05,
+      "best_params": null,
+      "val_metrics": {
+        "Accuracy": 0.9513,
+        "Precision": 0.9621,
+        "Recall": 0.9244,
+        "F1": 0.9429,
+        "ROC-AUC": 0.9836
+      },
+      "saved_to": "models/decision_tree.pkl",
+      "status": "ok"
+    },
+    "Random Forest": {
+      "family": "ensemble",
+      "fit_seconds": 52.58,
+      "predict_seconds": 0.12,
+      "best_params": {
+        "model__n_estimators": 200,
+        "model__min_samples_split": 5,
+        "model__min_samples_leaf": 1,
+        "model__max_features": 0.5,
+        "model__max_depth": 20
+      },
+      "val_metrics": {
+        "Accuracy": 0.9642,
+        "Precision": 0.9754,
+        "Recall": 0.9414,
+        "F1": 0.9581,
+        "ROC-AUC": 0.9947
+      },
+      "saved_to": "models/random_forest.pkl",
+      "status": "ok"
+    },
+    "Support Vector Machine": {
+      "family": "classical",
+      "fit_seconds": 32.68,
+      "predict_seconds": 15.35,
+      "best_params": null,
+      "val_metrics": {
+        "Accuracy": 0.9546,
+        "Precision": 0.9593,
+        "Recall": 0.9353,
+        "F1": 0.9471,
+        "ROC-AUC": 0.9885
+      },
+      "saved_to": "models/support_vector_machine.pkl",
+      "status": "ok"
+    },
+    "K-Nearest Neighbors": {
+      "family": "classical",
+      "fit_seconds": 0.19,
+      "predict_seconds": 0.82,
+      "best_params": null,
+      "val_metrics": {
+        "Accuracy": 0.925,
+        "Precision": 0.9466,
+        "Recall": 0.8769,
+        "F1": 0.9104,
+        "ROC-AUC": 0.9772
+      },
+      "saved_to": "models/k_nearest_neighbors.pkl",
+      "status": "ok"
+    },
+    "XGBoost": {
+      "family": "ensemble",
+      "fit_seconds": 7.13,
+      "predict_seconds": 0.06,
+      "best_params": {
+        "model__subsample": 1.0,
+        "model__n_estimators": 200,
+        "model__max_depth": 10,
+        "model__learning_rate": 0.03,
+        "model__colsample_bytree": 0.85
+      },
+      "val_metrics": {
+        "Accuracy": 0.9637,
+        "Precision": 0.9743,
+        "Recall": 0.9412,
+        "F1": 0.9575,
+        "ROC-AUC": 0.9948
+      },
+      "saved_to": "models/xgboost.pkl",
+      "status": "ok"
+    },
+    "Gradient Boosting": {
+      "family": "ensemble",
+      "fit_seconds": 15.92,
+      "predict_seconds": 0.1,
+      "best_params": null,
+      "val_metrics": {
+        "Accuracy": 0.9474,
+        "Precision": 0.9533,
+        "Recall": 0.9241,
+        "F1": 0.9385,
+        "ROC-AUC": 0.9902
+      },
+      "saved_to": "models/gradient_boosting.pkl",
+      "status": "ok"
+    },
+    "Extra Trees": {
+      "family": "ensemble",
+      "fit_seconds": 1.32,
+      "predict_seconds": 0.17,
+      "best_params": null,
+      "val_metrics": {
+        "Accuracy": 0.9599,
+        "Precision": 0.969,
+        "Recall": 0.9376,
+        "F1": 0.953,
+        "ROC-AUC": 0.9928
+      },
+      "saved_to": "models/extra_trees.pkl",
+      "status": "ok"
+    },
+    "Voting Ensemble": {
+      "family": "ensemble",
+      "fit_seconds": 2.98,
+      "predict_seconds": 0.25,
+      "best_params": null,
+      "val_metrics": {
+        "Accuracy": 0.9649,
+        "Precision": 0.9745,
+        "Recall": 0.9439,
+        "F1": 0.9589,
+        "ROC-AUC": 0.9947
+      },
+      "saved_to": "models/voting_ensemble.pkl",
+      "status": "ok"
+    },
+    "Stacking Ensemble": {
+      "family": "ensemble",
+      "fit_seconds": 6.83,
+      "predict_seconds": 0.16,
+      "best_params": null,
+      "val_metrics": {
+        "Accuracy": 0.965,
+        "Precision": 0.9703,
+        "Recall": 0.9486,
+        "F1": 0.9593,
+        "ROC-AUC": 0.9952
+      },
+      "saved_to": "models/stacking_ensemble.pkl",
+      "status": "ok"
+    },
+    "Neural Net (Basic MLP)": {
+      "family": "deep",
+      "fit_seconds": 25.71,
+      "predict_seconds": 0.24,
+      "epochs_run": 49,
+      "epochs_budget": 60,
+      "parameters": 43009,
+      "architecture": "Two hidden blocks, dropout 0.3.",
+      "val_metrics": {
+        "Accuracy": 0.9659,
+        "Precision": 0.976,
+        "Recall": 0.9448,
+        "F1": 0.9601,
+        "ROC-AUC": 0.9955
+      },
+      "saved_to": "models/neural_net_basic_mlp.keras",
+      "status": "ok"
+    },
+    "Neural Net (Regularized MLP)": {
+      "family": "deep",
+      "fit_seconds": 26.03,
+      "predict_seconds": 0.22,
+      "epochs_run": 49,
+      "epochs_budget": 60,
+      "parameters": 43009,
+      "architecture": "L2 1e-4 + dropout 0.45.",
+      "val_metrics": {
+        "Accuracy": 0.9643,
+        "Precision": 0.9741,
+        "Recall": 0.9428,
+        "F1": 0.9582,
+        "ROC-AUC": 0.9953
+      },
+      "saved_to": "models/neural_net_regularized_mlp.keras",
+      "status": "ok"
+    },
+    "Neural Net (Deep MLP)": {
+      "family": "deep",
+      "fit_seconds": 38.35,
+      "predict_seconds": 0.28,
+      "epochs_run": 44,
+      "epochs_budget": 60,
+      "parameters": 112513,
+      "architecture": "Four hidden blocks, tapering width.",
+      "val_metrics": {
+        "Accuracy": 0.9667,
+        "Precision": 0.9787,
+        "Recall": 0.9439,
+        "F1": 0.961,
+        "ROC-AUC": 0.9957
+      },
+      "saved_to": "models/neural_net_deep_mlp.keras",
+      "status": "ok"
+    }
+  },
+  "failures": {},
+  "notes": [
+    "Test set was evaluated exactly once, after model selection on validation.",
+    "Tuning budget: 12 candidates x 3 folds (train only)."
+  ],
+  "final_model": "Neural Net (Deep MLP)",
+  "reference_benchmarks": {
+    "source": "ICSADL 2026, Random Forest",
+    "accuracy": 0.9583,
+    "f1": 0.9515,
+    "note": "External reference point for discussion only; not a goal."
+  },
+  "shap": {
+    "model": "Random Forest",
+    "top_features": [
+      {
+        "Feature": "Online Boarding",
+        "Mean |SHAP|": 0.1180714512241926
+      },
+      {
+        "Feature": "In-flight Wifi Service",
+        "Mean |SHAP|": 0.11118625135649896
+      },
+      {
+        "Feature": "Type of Travel_Personal",
+        "Mean |SHAP|": 0.0725220398317586
+      },
+      {
+        "Feature": "Type of Travel_Business",
+        "Mean |SHAP|": 0.06051510149947954
+      },
+      {
+        "Feature": "Class_Business",
+        "Mean |SHAP|": 0.04688255885483778
+      },
+      {
+        "Feature": "Customer Type_Returning",
+        "Mean |SHAP|": 0.031608651872937786
+      },
+      {
+        "Feature": "Customer Type_First-time",
+        "Mean |SHAP|": 0.03151486829718975
+      },
+      {
+        "Feature": "In-flight Entertainment",
+        "Mean |SHAP|": 0.02900792983438286
+      },
+      {
+        "Feature": "Check-in Service",
+        "Mean |SHAP|": 0.01967411885432431
+      },
+      {
+        "Feature": "In-flight Service",
+        "Mean |SHAP|": 0.018072960261266407
+      }
+    ]
+  }
+}

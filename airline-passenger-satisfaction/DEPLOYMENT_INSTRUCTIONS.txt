@@ -1,0 +1,276 @@
+================================================================================
+  AIRLINE PASSENGER SATISFACTION SIMULATOR
+  How to push the code to GitHub and deploy it on Streamlit Community Cloud
+================================================================================
+
+  Everything below has been tested. The project is already a git repository with
+  one commit on the "main" branch, so you are starting from Step 2.
+
+  Total time: about 15 minutes, most of it waiting for the first build.
+  Cost: free.
+
+
+================================================================================
+  BEFORE YOU START
+================================================================================
+
+  You need:
+
+    1. A GitHub account            -> https://github.com/signup
+    2. Git installed               -> run: git --version
+                                      (macOS: it comes with Xcode command line
+                                       tools; if missing, run: xcode-select --install)
+    3. The project folder          -> /Users/tejas/Desktop/PM proj
+
+  You do NOT need a credit card. Both GitHub and Streamlit Community Cloud are
+  free for public repositories.
+
+
+================================================================================
+  WHAT WILL BE UPLOADED (and what will not)
+================================================================================
+
+  The repository is 20 MB and contains 82 files.
+
+  INCLUDED:
+    - All source code (src/, app/, train.py, config.py, tests/)
+    - The 7 model files the app actually loads (15.5 MB total)
+    - An 8,000-row sample dataset for the Data Explorer page (0.8 MB)
+    - All generated figures, result tables and the experiment manifest
+    - The full academic report and README
+
+  DELIBERATELY EXCLUDED (see .gitignore):
+    - extra_trees.pkl        105 MB  -> over GitHub's 100 MB per-file limit
+    - voting_ensemble.pkl     99 MB  -> near the limit, no benefit over Random Forest
+    - stacking_ensemble.pkl   28 MB  -> statistically tied with Random Forest
+    - The full 12 MB dataset CSV     -> the 8,000-row sample ships instead
+    - .venv/                          -> rebuilt automatically on the server
+
+  This is intentional. The app was tested against a simulated fresh clone
+  containing only these files, and all five pages render with zero errors.
+  You can regenerate every excluded file locally with:
+
+      python train.py --mode full
+
+
+================================================================================
+  STEP 1 - CREATE AN EMPTY REPOSITORY ON GITHUB
+================================================================================
+
+  1.1  Go to https://github.com/new
+
+  1.2  Fill in the form:
+
+         Repository name:  airline-passenger-satisfaction
+         Description:      Predicting airline passenger satisfaction using
+                           machine learning and deep learning
+         Visibility:       PUBLIC
+                           (Streamlit's free tier requires a public repo.
+                            Private repos need a paid Streamlit plan.)
+
+  1.3  IMPORTANT - leave all three checkboxes UNTICKED:
+
+         [ ] Add a README file
+         [ ] Add .gitignore
+         [ ] Choose a license
+
+       Your project already has a README and .gitignore. Ticking these creates
+       conflicting files and the push in Step 2 will be rejected.
+
+  1.4  Click "Create repository".
+
+  1.5  GitHub now shows a page with a URL near the top. Copy it. It looks like:
+
+         https://github.com/YOUR-USERNAME/airline-passenger-satisfaction.git
+
+       You will paste this in the next step.
+
+
+================================================================================
+  STEP 2 - PUSH THE CODE
+================================================================================
+
+  Open the Terminal app and run these commands one at a time.
+
+  2.1  Move into the project folder (note the quotes - the folder name has a
+       space in it):
+
+         cd "/Users/tejas/Desktop/PM proj"
+
+  2.2  Confirm you are in the right place. This should print 82:
+
+         git ls-files | wc -l
+
+  2.3  Connect your local repository to GitHub. Replace the URL with the one
+       you copied in Step 1.5:
+
+         git remote add origin https://github.com/YOUR-USERNAME/airline-passenger-satisfaction.git
+
+       If you get "error: remote origin already exists", you have run this
+       before. Overwrite it instead:
+
+         git remote set-url origin https://github.com/YOUR-USERNAME/airline-passenger-satisfaction.git
+
+  2.4  Push:
+
+         git push -u origin main
+
+  2.5  You will be asked to sign in.
+
+       A browser window usually opens - sign in to GitHub and approve.
+
+       If you are instead asked for a username and password in the Terminal,
+       GitHub no longer accepts your account password here. You need a Personal
+       Access Token:
+
+         a. Go to https://github.com/settings/tokens
+         b. Click "Generate new token" -> "Generate new token (classic)"
+         c. Note: "streamlit deploy"
+         d. Expiration: 30 days is fine
+         e. Tick the "repo" checkbox (this ticks its sub-items automatically)
+         f. Scroll down, click "Generate token"
+         g. COPY THE TOKEN NOW - GitHub never shows it again
+         h. Back in the Terminal:
+              Username: your GitHub username
+              Password: paste the token (it will look blank as you paste -
+                        that is normal, just press Enter)
+
+  2.6  The upload takes about a minute for 20 MB. When it finishes you should
+       see something like:
+
+         Writing objects: 100% (85/85), 19.99 MiB | 4.20 MiB/s, done.
+         branch 'main' set up to track 'origin/main'.
+
+  2.7  Refresh your GitHub repository page in the browser. You should now see
+       all your folders: app/, src/, models/, outputs/, report/, tests/.
+
+
+================================================================================
+  STEP 3 - DEPLOY ON STREAMLIT COMMUNITY CLOUD
+================================================================================
+
+  3.1  Go to https://share.streamlit.io
+
+  3.2  Click "Sign in with GitHub" and authorise Streamlit when prompted.
+       Streamlit needs read access to list your repositories.
+
+  3.3  Click the "Create app" button (top right).
+
+  3.4  Choose "Deploy a public app from GitHub".
+
+  3.5  Fill in the three fields:
+
+         Repository:    YOUR-USERNAME/airline-passenger-satisfaction
+         Branch:        main
+         Main file path:  app/app.py          <-- IMPORTANT, not just app.py
+
+       The app URL field is optional. Whatever you type becomes your public
+       address, for example:
+
+         airline-satisfaction-tejas.streamlit.app
+
+  3.6  Click "Deploy".
+
+  3.7  WAIT. The first build takes 5 to 10 minutes because TensorFlow is a
+       large download. You will see a live build log. This is normal and it is
+       working as long as the log keeps moving.
+
+       Lines mentioning "Collecting tensorflow" taking several minutes are
+       expected.
+
+  3.8  When the build finishes, your app opens automatically. Check that:
+
+         - The Flight Deck page shows the parallax hero and the metric panels
+         - Simulate Passenger returns a prediction when you click a preset
+         - Data Explorer shows a blue banner saying it is using the
+           8,000-row sample (this is correct and expected on the server)
+         - Model Bay shows the comparison charts
+
+  3.9  Your app is live. Share the URL. It stays up permanently and goes to
+       sleep after about 12 hours of inactivity - the next visitor wakes it,
+       which takes roughly 30 seconds.
+
+
+================================================================================
+  STEP 4 - UPDATING THE APP LATER
+================================================================================
+
+  Streamlit watches your GitHub repository. Any push to "main" redeploys the
+  app automatically within a minute or two.
+
+    cd "/Users/tejas/Desktop/PM proj"
+    git add -A
+    git commit -m "describe what you changed"
+    git push
+
+  If you re-run the experiment (python train.py --mode full), the results,
+  figures and models change on disk. Commit and push those the same way, and
+  the deployed app will show the new numbers.
+
+
+================================================================================
+  TROUBLESHOOTING
+================================================================================
+
+  "remote: Repository not found"
+      The URL in Step 2.3 is wrong, or the repository is private and you are
+      not signed in. Check the URL character by character.
+
+  "Updates were rejected because the remote contains work you do not have"
+      You ticked one of the checkboxes in Step 1.3. Easiest fix: delete the
+      repository on GitHub (Settings -> scroll to the bottom -> Delete this
+      repository) and redo Step 1 with the boxes unticked.
+
+  "error: failed to push some refs" / "src refspec main does not match"
+      Your branch may be named master. Check with:  git branch --show-current
+      If it says master, rename it:  git branch -M main   then push again.
+
+  "support for password authentication was removed"
+      Use a Personal Access Token as described in Step 2.5.
+
+  Push is very slow or times out
+      You are on a slow connection and the repo is 20 MB. Let it run. If it
+      fails halfway, just run "git push -u origin main" again - git resumes.
+
+  Streamlit build fails with "ModuleNotFoundError"
+      A package is missing from requirements.txt. Read the build log to see
+      which one, add it to requirements.txt, then commit and push.
+
+  Streamlit build fails or the app crashes with a memory error
+      The free tier allows about 1 GB of RAM. TensorFlow is large. If this
+      happens, the fix is to serve the tree models only - Random Forest is
+      statistically tied with the neural network (their confidence intervals
+      overlap), so you lose 0.00049 F1, which is inside the noise. Ask for
+      help making this change; it is a small edit to app/app.py plus removing
+      tensorflow from requirements.txt.
+
+  The app says "No results found" or "Artifacts missing"
+      The models/ or outputs/ folders did not upload. Check on GitHub that
+      models/best_model.pkl and outputs/model_results.csv are present.
+
+  Data Explorer shows a banner about the 8,000-row sample
+      This is correct, not an error. The full 12 MB dataset is not uploaded.
+      The sample preserves the exact class balance (43.45% satisfied) and every
+      category level, so all the patterns match the full data.
+
+
+================================================================================
+  QUICK REFERENCE
+================================================================================
+
+  Project folder     /Users/tejas/Desktop/PM proj
+  Branch             main
+  Repo size          20 MB, 82 files
+  Main file path     app/app.py
+  GitHub new repo    https://github.com/new
+  Streamlit deploy   https://share.streamlit.io
+  Access tokens      https://github.com/settings/tokens
+
+  Run locally        cd "/Users/tejas/Desktop/PM proj"
+                     source .venv/bin/activate
+                     streamlit run app/app.py
+
+  Re-run experiment  python train.py --mode full     (about 7.5 minutes)
+  Run tests          pytest tests/ -v                (32 tests)
+
+================================================================================

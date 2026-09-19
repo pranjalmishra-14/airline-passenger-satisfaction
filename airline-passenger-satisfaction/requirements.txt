@@ -1,0 +1,15 @@
+# Verified working on Python 3.11.15 / macOS arm64
+# NOTE: XGBoost requires OpenMP -> `brew install libomp` on macOS
+pandas==3.0.6
+numpy==2.4.6
+scikit-learn==1.9.1
+matplotlib==3.10.7
+seaborn==0.13.2
+plotly==6.3.1
+xgboost==3.2.0
+tensorflow==2.21.0
+shap==0.51.0
+streamlit==1.64.0
+joblib==1.5.2
+tabulate==0.9.0
+pytest==8.4.2

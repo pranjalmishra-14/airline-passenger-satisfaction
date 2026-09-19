@@ -1,0 +1,220 @@
+{
+  "final_model": "Neural Net (Deep MLP)",
+  "final_model_kind": "keras",
+  "target": "Satisfaction",
+  "positive_label": "Satisfied",
+  "negative_label": "Neutral or Dissatisfied",
+  "raw_features": [
+    {
+      "name": "Gender",
+      "dtype": "str",
+      "kind": "categorical",
+      "min": null,
+      "max": null,
+      "median": null,
+      "categories": [
+        "Female",
+        "Male"
+      ]
+    },
+    {
+      "name": "Age",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 7.0,
+      "max": 85.0,
+      "median": 40.0,
+      "categories": null
+    },
+    {
+      "name": "Customer Type",
+      "dtype": "str",
+      "kind": "categorical",
+      "min": null,
+      "max": null,
+      "median": null,
+      "categories": [
+        "First-time",
+        "Returning"
+      ]
+    },
+    {
+      "name": "Type of Travel",
+      "dtype": "str",
+      "kind": "categorical",
+      "min": null,
+      "max": null,
+      "median": null,
+      "categories": [
+        "Business",
+        "Personal"
+      ]
+    },
+    {
+      "name": "Class",
+      "dtype": "str",
+      "kind": "categorical",
+      "min": null,
+      "max": null,
+      "median": null,
+      "categories": [
+        "Business",
+        "Economy",
+        "Economy Plus"
+      ]
+    },
+    {
+      "name": "Flight Distance",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 31.0,
+      "max": 4983.0,
+      "median": 842.0,
+      "categories": null
+    },
+    {
+      "name": "Departure Delay",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 0.0,
+      "max": 1592.0,
+      "median": 0.0,
+      "categories": null
+    },
+    {
+      "name": "Arrival Delay",
+      "dtype": "float64",
+      "kind": "numeric",
+      "min": 0.0,
+      "max": 1584.0,
+      "median": 0.0,
+      "categories": null
+    },
+    {
+      "name": "Departure and Arrival Time Convenience",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 0.0,
+      "max": 5.0,
+      "median": 3.0,
+      "categories": null
+    },
+    {
+      "name": "Ease of Online Booking",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 0.0,
+      "max": 5.0,
+      "median": 3.0,
+      "categories": null
+    },
+    {
+      "name": "Check-in Service",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 1.0,
+      "max": 5.0,
+      "median": 3.0,
+      "categories": null
+    },
+    {
+      "name": "Online Boarding",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 0.0,
+      "max": 5.0,
+      "median": 3.0,
+      "categories": null
+    },
+    {
+      "name": "Gate Location",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 0.0,
+      "max": 5.0,
+      "median": 3.0,
+      "categories": null
+    },
+    {
+      "name": "On-board Service",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 0.0,
+      "max": 5.0,
+      "median": 4.0,
+      "categories": null
+    },
+    {
+      "name": "Seat Comfort",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 1.0,
+      "max": 5.0,
+      "median": 4.0,
+      "categories": null
+    },
+    {
+      "name": "Leg Room Service",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 0.0,
+      "max": 5.0,
+      "median": 4.0,
+      "categories": null
+    },
+    {
+      "name": "Cleanliness",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 0.0,
+      "max": 5.0,
+      "median": 3.0,
+      "categories": null
+    },
+    {
+      "name": "Food and Drink",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 0.0,
+      "max": 5.0,
+      "median": 3.0,
+      "categories": null
+    },
+    {
+      "name": "In-flight Service",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 0.0,
+      "max": 5.0,
+      "median": 4.0,
+      "categories": null
+    },
+    {
+      "name": "In-flight Wifi Service",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 0.0,
+      "max": 5.0,
+      "median": 3.0,
+      "categories": null
+    },
+    {
+      "name": "In-flight Entertainment",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 0.0,
+      "max": 5.0,
+      "median": 4.0,
+      "categories": null
+    },
+    {
+      "name": "Baggage Handling",
+      "dtype": "int64",
+      "kind": "numeric",
+      "min": 1.0,
+      "max": 5.0,
+      "median": 4.0,
+      "categories": null
+    }
+  ]
+}
